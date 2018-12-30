@@ -54,6 +54,24 @@ swap=false;
 	// *Hint* it helps to sort it first.
 	// *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
-		return 0;
+		boolean swap2=true;
+		int middle=0;
+		int num=0;
+		while (swap2) {
+		swap2=false;
+				for (int i = 0; i < arr.length-1; i++) {
+			if (arr[i]>arr[i+1]) {
+				int temp=0;
+				temp=arr[i];
+				arr[i]=arr[i+1];
+				arr[i+1]=temp;
+				swap2=true;
+			}
+			if (swap2==true) {
+				middle=arr.length/2;
+			}
+		}
+		}
+		return arr[middle];
 	}
 }
