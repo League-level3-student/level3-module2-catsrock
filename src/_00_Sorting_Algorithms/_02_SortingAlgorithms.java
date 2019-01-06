@@ -42,7 +42,7 @@ public class _02_SortingAlgorithms {
 			break;
 		}
 		case "Merge":{
-			new SortingVisualizer(new MergeSorter());
+			new SortingVisualizer(new MergeSorter_Copy());
 			break;
 		}
 		case "Heap":{
