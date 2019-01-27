@@ -30,23 +30,29 @@ public class BogoSorter extends Sorter {
 				random = r.nextInt(array.length);
 				random2 = r.nextInt(array.length);
 			} while (random == random2);
-			{
-				random = r.nextInt(array.length);
-			}
+			
+			
+		
 			int temp = 0;
 			temp = array[random];
 			array[random] = array[random2];
 			array[random2] = temp;
-			arrSorted = true;
 			for (int i = 0; i < array.length - 1; i++) {
 
 				if (array[i] > array[i + 1]) {
 					arrSorted = false;
 					break;
 				}
+				else if(i==array.length-2) {
+					arrSorted=true;
+				}
 			}
-
+			
+			
+			
+			
+display.updateDisplay();
 		}
-		display.updateDisplay();
+		
 	}
 }

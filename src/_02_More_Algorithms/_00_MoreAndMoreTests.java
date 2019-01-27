@@ -11,25 +11,39 @@ import org.junit.Test;
 public class _00_MoreAndMoreTests {
 
 //	@Test
-//	  public void MultTest() {
-//
-//	    assertEquals("10 x 0 = 0", multiply(10, 0));
-//	    assertEquals("10 x 10 = 100", multiply(10, 10));
-//	    assertEquals("8 x 11 = 88", multiply(8, 11));
-//	  }
+	  public void MultiTest() {
+		  
+		  
+	    assertEquals("10 x 0 = 0", multiply(10, 0));
+	    assertEquals("10 x 10 = 100", multiply(10, 10));
+	    assertEquals("8 x 11 = 88", multiply(8, 11));
+	  }
+	  public int multiply(int x, int y) {
+		  return x*=y;
+	  }
 //
 //	@Test
-//	  public void PrimeTest() {
-//
-//	    assertTrue(isPrime(3));
-//	    assertTrue(isPrime(5));
-//	    assertTrue(isPrime(541));
-//	    assertFalse(isPrime(4));
-//	    assertFalse(isPrime(12));
-//	    assertFalse(isPrime(527));
-//
-//	  }
-//
+	 /* boolean isPrime=true;
+	  public void PrimeTest() {
+
+	    assertTrue(isPrime(3));
+	    assertTrue(isPrime(5));
+	    assertTrue(isPrime(541));
+	    assertFalse(isPrime(4));
+	    assertFalse(isPrime(12));
+	    assertFalse(isPrime(527));
+
+	  }
+	  public int isPrime(int prime){
+		  if (prime/2>0) {
+			  return prime;
+		}
+		  else {
+			  
+		  }
+	  }
+*/
+	  
 //	@Test
 //	  public void SquareTest() {
 //
