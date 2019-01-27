@@ -23,7 +23,7 @@ public class _00_MoreAndMoreTests {
 	  }
 //
 //	@Test
-	 /* boolean isPrime=true;
+	  boolean isPrime=true;
 	  public void PrimeTest() {
 
 	    assertTrue(isPrime(3));
@@ -35,14 +35,10 @@ public class _00_MoreAndMoreTests {
 
 	  }
 	  public int isPrime(int prime){
-		  if (prime/2>0) {
-			  return prime;
-		}
-		  else {
-			  
-		  }
+		  for(int i=2; i<prime; i++){
+		  System.exit(0);
 	  }
-*/
+return prime;
 	  
 //	@Test
 //	  public void SquareTest() {
