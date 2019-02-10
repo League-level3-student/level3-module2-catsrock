@@ -34,38 +34,67 @@ public class _00_MoreAndMoreTests {
 	    assertFalse(isPrime(527));
 
 	  }
-	  public int isPrime(int prime){
-		  for(int i=2; i<prime; i++){
-		  System.exit(0);
+	private void assertTrue(int num) {
+		
+		
+	}
+	private void assertFalse(int num) {
+		
+		
+	}
+	public int isPrime(int num){
+		  for(int i=2; i<=num/2; i++){
+		  if (num%i==0) {
+			isPrime=false;
+			System.exit(0);
+		}	  
 	  }
-return prime;
+return num;
+	}
 	  
 //	@Test
-//	  public void SquareTest() {
-//
-//	    assertTrue(isSquare(4));
-//	    assertTrue(isSquare(144));
-//	    assertTrue(isSquare(64));
-//	    assertTrue(isSquare(10201));
-//	    assertTrue(isSquare(1));
-//	    assertFalse(isSquare(3));
-//	    assertFalse(isSquare(22));
-//	    assertFalse(isSquare(143));
-//
-//	  }
+	
+	  public void SquareTest() {
+
+		assertTrue(isSquare(4));
+	    assertTrue(isSquare(144));
+	    assertTrue(isSquare(64));
+	    assertTrue(isSquare(10201));
+	    assertTrue(isSquare(1));
+	    assertFalse(isSquare(3));
+	    assertFalse(isSquare(22));
+	    assertFalse(isSquare(143));
+
+	  }
+	  public int isSquare(int number) {
+		  for (int i = 0; i <= number; i++) {
+			if (number!=i*i) {
+				System.exit(0);
+			}
+		}
+		  return number;
+	  }
 //
 //	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
+public int isCube(int num) {
+	for (int i = 0; i < num; i++) {
+		if (num!=i*i*i) {
+			System.exit(0);
+		}
+	}
+	return num;
+}
 
 
 
