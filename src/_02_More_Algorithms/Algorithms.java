@@ -1,5 +1,6 @@
 package _02_More_Algorithms;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Algorithms {
@@ -19,36 +20,62 @@ public class Algorithms {
 		}
 		return 0;
 	}
-	public static int findTallest(List<Double> peeps) {
-		int max=Integer.MAX_VALUE;
+	public static double findTallest(List<Double> peeps) {
+		double max=Integer.MIN_VALUE;
 		for (int i = 0; i < peeps.size(); i++) {
-			if (peeps.get(i)==max) {
-				return i;
+			if (peeps.get(i)>max) {
+				max=peeps.get(i);
+				
 			}
 		}
-		return 0;
+		return max;
 	}
-	public static int findLongestWord(List<String> words) {
+	public static String findLongestWord(List<String> words) {
 		String longest="";
 		for (int i = 0; i < words.size(); i++) {
-			if (words.get(i).length()==longest.length()) {
-				return i;
+			if (words.get(i).length()>longest.length()) {
+				longest=words.get(i);
+				
 			}
 		}
-		return 0;
+		return longest;
 	}
-	public static int containsSOS(List<String> message) {
+	public static boolean containsSOS(List<String> message) {
 		for (int i = 0; i < message.size(); i++) {
-			if (message.get(i).contains("...---...")) {
-				return i;
+			if (message.get(i).contains("... --- ...")) {
+				return true;
 			}
 		}
-		return 0;
+		return false;
 	}
-	public static double sortScores(List<Double> results) {
-		for (int i = 0; i < results.size(); i++) {
-			
+	public static List<Double> sortScores(List<Double> results) {
+		boolean swap=true;
+		while(swap){
+			swap=false;
+		for (int i = 0; i < results.size()-1; i++) {
+			if (results.get(i)>results.get(i+1)) {
+				double temp=0;
+				temp=results.get(i);
+				results.set(i, results.get(i+1));
+				results.set(i+1, temp);
+				swap=true;
+				//Collections.sort(results, (d1, d2)->{d1.compareTo(d2)});
+			}
 		}
-		return 0;
+		
 	}
+		return results;
+	}
+	public static testSortStringLength(List<String> unsortedSequences) {
+		String longest="";
+		for (int i = 0; i < unsortedSequences.size(); i++) {
+			if (unsortedSequences.get(i).length()>longest.length()) {
+				String temp="";
+				temp=unsortedSequences.get(i);
+				unsortedSequences.set(i, longest);
+			}
+		}
+	}
+		
+	
 }
